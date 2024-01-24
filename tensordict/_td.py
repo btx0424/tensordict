@@ -1979,8 +1979,8 @@ class TensorDict(TensorDictBase):
                     val = val._exclude(
                         *cur_keys, inplace=inplace, set_shared=set_shared
                     )
-                if not inplace:
-                    _tensordict[key] = val
+                    if not inplace:
+                        _tensordict[key] = val
         if inplace:
             return self
         result = TensorDict(
